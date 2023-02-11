@@ -1,80 +1,52 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
-img: assets/img/3.jpg
+title: lesion detection
+description: Detectron2 based pipeline to detect lesions present in undersampled MRI images.
+img: assets/img/lesion_detection.png
 importance: 2
-category: work
+category: all
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+To save MRI image generation time from raw MRI measurements, deep learning algorithms have emerged as a viable method for MRI reconstruction with higher rates of acceleration. Recent reconstruction problems have shown various shortcomings in current deep learning approaches, including the loss of fine image details even when employing models that score well in terms of global quality criteria. This study provided an end-to-end deep learning framework for pathology detection present in MRI images.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The proposed system accepts as input MRI images obtained using MRI reconstruction algorithms (such as [VarNet](https://onlinelibrary.wiley.com/doi/full/10.1002/mrm.26977)), then conducts lesion identification. Using publicly available [fastMRI](https://arxiv.org/abs/1811.08839) dataset, this is the first study to establish an automated lesion identification pipeline for MRI images reconstructed using undersampled raw MRI measurements with comparable identification performance at undersampling factors upto 8.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/lesion_data_distribution.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Figure 1: Distribution of lesions in fastMRI knee dataset.
 </div>
+
+The lesion identification pipeline consisted of three different variants of faster-rcnn models present in Detectron2 library: (1) faster_rcnn_R_50_FPN_3x; (2) faster_rcnn_R_50_DC5_3x; and (3) faster_rcnn_R_50_C4. The identified lesions from all these model variants were then ensembled for final output.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/inference_pipeline.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Figure 2: Overview of the lesion identification pipeline.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/joint_effusion_varnet_acc.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Figure 3: Joint effusion identification in VarNet reconstructed MRI images with fully sampled data and images reconstructed with undersampling factors of 4 and 8.
 </div>
 
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/joint_effusion_f1_score.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-```
-{% endraw %}
+<div class="caption">
+    Figure 3: f1-score values for joint effusion identification in VarNet reconstructed MRI images with fully sampled data and images reconstructed with undersampling factors of 4 and 8.
+</div>
+
+It was observed that the developed lesion identification pipeline was able to detect common and as well some rare lesions with comparable identification performance for MRI images reconstructed at various undersampling rates. More information can be found in the presentation [here](https://docs.google.com/presentation/d/1e4rnnw2IUy727KgfCO0DB9T7aSrqSTNl/edit?usp=sharing&ouid=101805083213502751228&rtpof=true&sd=true).

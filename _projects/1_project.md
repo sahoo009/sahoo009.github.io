@@ -1,80 +1,25 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/12.jpg
+title: Automated Lexicon Generation
+description: COVID-19 lexicon generation based on BERT model.
+img: assets/img/covid_bert.jpg
 importance: 1
-#category: electrical engineering
+category: all
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Natural Language Processing (NLP) models consisting of Bidirectional Encoder Representations from Transformers (BERT) have been used to extract emerging COVID-19 symptoms. However, limited research surrounding lexicon generation exists for acute and long-term COVID-19 symptoms (hereby referred to as “COVID-19 symptoms”) using NLP models from clinical notes to aid clinical decision-making. This becomes crucial as more deadly strains of COVID-19 emerge. 
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+To assist in clinical decision-making by extracting sequences of lexical tokens for known COVID-19 symptoms from clinical notes, this study proposed an iterative approach to fine-tune a pre-trained BERT model for Named Entity Recognition (NER). The lexicon extraction performance of this fine-tuned BERT model was examined by using the extracted lexical tokens to annotate for the presence of mentions for six prevalent COVID-19 symptoms (dyspnea, fatigue, fever, cough, headaches, and nausea) on two manually-annotated reference corpora of notes.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/covid_fine_tuning_diagram.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Figure 1: Process flow for BERT fine-tuning and sequences of lexical token (SLT) extraction of COVID-19 symptoms from notes.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+It was observed that the lexicon generated using BERT had similar f1-score compared to the lexicon generated only by clinical experts. Hence, the proposed methodology could substantially minimize valuable clinical content expert time spent on lexicon generation while maintaining quality through streamlining the process of generating lexicon of COVID-19 symptoms present in clinical notes.
 
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+Manuscript found [here](https://drive.google.com/file/d/1FvkGWqHTw9dtjO_LvKbL8g7eQE8brrwS/view?usp=sharing). Accepted as a poster at American Medical Informatics Association 2021.  
