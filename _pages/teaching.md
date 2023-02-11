@@ -2,11 +2,20 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description:
 nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+1. Introduction to Computing Systems
+2. Applied Parallel Programming
+3. Digital Signal Processing
+4. Digital Design With Programmable Logic
+5. Computer Architecture and Machine Organization
+6. Embedded System Design
+7. Circuit and Electronics Laboratory II
+8. Algorithmic Techniques for Scalable Many-core Computing
+9. Applied Parallel Programming
+10. Introduction to Microcontrollers
+11. Fundamentals of Electrical Engineering Laboratory
 
-Organize your courses by years, topics, or universities, however you like!

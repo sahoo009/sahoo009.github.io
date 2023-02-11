@@ -2,96 +2,83 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Himanshu Shekhar Sahoo
     - name: Date of Birth
-      value: 14th March 1879
+      value: 19th July 1993
     - name: Languages
-      value: English, German
+      value: English, Hindi, Odia
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
+    - title: Doctor of Philosophy, Electrical Engineering
+      institution: University of Minnesota (UMN), Minnesota, USA
+      year: 2023
+    - title: Masters, ELectrical Engineering
+      institution: UMN, Minnesota, USA
+      year: 2017
+    - title: Bachelors, Information and Communication Technology
+      institution: Dhirubhai Ambani Institute of Information and Communication Technology, Gujarat, India
+      year: 2015
+- title: Work Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Lead AI and NLP Researcher
+      institution: Department of Electrical Engineering, UMN
+      year: 2019 - 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Developing grant proposals, writing journals, securing funding, exploring existing literature and state-of-the-art speech-to-text tools for project specific use cases, and increasing cross-collaboration with multiple teams across various institutions.
+    - title: Deep Learning Researcher
+      institution: Department of Surgery, UMN
+      year: 2021 - 2023
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - Using ML and NLP techniques, developing a novel clinical annotation system for high-volume, real-time extraction and analysis of acute and long-term COVID-19 symptoms from unstructured patient notes. 
+        - Comparable to other state-of-the-art clinical annotation systems, the developed system was the quickest, utilized little computational resources, and had good symptom extraction performance.
+    - title: Health Futures Researcher
+      institution: Microsoft
+      year: 2022
       description:
+        - Developed lesion detection pipeline to identify lesions (sprains, cartilage loss, fracture etc) present in a patient’s MRI image reconstructed using undersampled data. 
+        - In addition to detecting rare lesions, the pipeline had similar detection performance for MRI images reconstructed using no undersampling and MRI images reconstructed using an undersampling factor of 2, 4 and 8. 
+    - title: Teaching Instructor
+      institution: Department of Electrical Engineering, UMN
+      year: 2016 - 2021
+      description:
+        -  Ability to work under pressure while teaching and grading assignments in more than 20 undergraduate and graduate level classes with class sizes ranging between 20-150 students.
+    - title: AI Infrastructure Data Science Intern
+      institution: NVIDIA
+      year: 2018
+      description:
+        - Developed state of the art multi-core multi-GPU ML models in CUDA C++. 
+        - Analyzed and alleviated existing scaling inefficiencies present in these ML models. 
+        - The developed models were a part of the NVIDIA RAPIDS library. 
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Grants Received
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
+    - year: 2021
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
+        - Cisco Tech for HealthCare Research Grant
+        - UMN Informatics Institute Small Seed Grant
+        
+- title: Achievements
+  type: time_table
+  contents:
+    - year: 2021
       items: 
-        - Max Planck Medal
+        - Google PhD Fellowship - University Finalist
 
-- title: Academic Interests
+- title: Areas of Interest
   type: nested_list
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+    - title: GPGPU architecture optimization
+    - title: Machine Learning
       items:
-        - Description 1.
-        - Description 2.
+        - Natural Language Processing
+        - Explainable ML
+        - Fairness in ML
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Reading, Traveling, Table Tennis, Cooking

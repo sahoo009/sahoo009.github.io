@@ -9,11 +9,10 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>"By far, the greatest danger of Artificial Intelligence is that people conclude too early that they understand it."</p>
-    <p>— Eliezer Yudkowsky</p>
+    <p>"Artificial Intelligence will become a Mirror of Humanity."</p>
  
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
